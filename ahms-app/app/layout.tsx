@@ -4,7 +4,8 @@ import Link from 'next/link'
 
 const khmerFont = Kantumruy_Pro({ 
   subsets: ['khmer'],
-  weight: ['400', '700'] 
+  weight: ['400', '700'],
+  display: 'swap'
 })
 
 export default function RootLayout({
@@ -15,17 +16,20 @@ export default function RootLayout({
   return (
     <html lang="km">
       <body className={khmerFont.className}>
-        <main className="min-h-screen">
-          {children}
-        </main>
-        <footer className="bg-slate-900 p-8 border-t border-slate-800 text-center text-white">
-          <div className="flex flex-wrap justify-center gap-4 mb-4">
-            <Link href="/" className="px-4 py-2 bg-slate-800 rounded hover:bg-blue-600 transition-colors">🏠 Home</Link>
-            <Link href="/status" className="px-4 py-2 bg-slate-800 rounded hover:bg-blue-600 transition-colors">🔍 Status</Link>
-            <Link href="/admin" className="px-4 py-2 bg-slate-800 rounded hover:bg-blue-600 transition-colors">📊 Admin</Link>
-          </div>
-          <p className="text-slate-500 text-xs">MLMUPC © 2026</p>
-        </footer>
+        <div className="flex flex-col min-h-screen">
+          <main className="flex-grow">
+            {children}
+          </main>
+          
+          <footer className="bg-slate-900 text-white p-10 text-center border-t border-slate-800">
+            <div className="flex flex-wrap justify-center gap-6 mb-6">
+              <Link href="/" className="hover:text-blue-400 font-medium">🏠 Home</Link>
+              <Link href="/status" className="hover:text-blue-400 font-medium">🔍 Status</Link>
+              <Link href="/admin" className="hover:text-blue-400 font-medium">📊 Admin</Link>
+            </div>
+            <p className="text-slate-500 text-xs uppercase tracking-widest">MLMUPC Portal © 2026</p>
+          </footer>
+        </div>
       </body>
     </html>
   )
