@@ -15,15 +15,18 @@ export default function RootLayout({
   return (
     <html lang="km">
       <body className={khmerFont.className}>
-        <div className="flex flex-col min-h-screen bg-white">
-          <main className="flex-grow">{children}</main>
-          <footer className="p-10 bg-slate-900 text-white text-center">
+        <div className="flex flex-col min-h-screen">
+          <main className="flex-grow">
+            {children}
+          </main>
+          
+          <footer className="bg-slate-900 text-white p-8 text-center border-t border-slate-800">
             <div className="flex justify-center gap-6 mb-4">
-              <Link href="/">Home</Link>
-              <Link href="/status">Status</Link>
-              <Link href="/admin">Admin</Link>
+              <Link href="/" className="hover:text-blue-400">🏠 Home</Link>
+              <Link href="/status" className="hover:text-blue-400">🔍 Status</Link>
+              <Link href="/admin" className="hover:text-blue-400">📊 Admin</Link>
             </div>
-            <p className="text-xs text-slate-500">MLMUPC © 2026</p>
+            <p className="text-slate-500 text-xs uppercase">MLMUPC Portal © 2026</p>
           </footer>
         </div>
       </body>
