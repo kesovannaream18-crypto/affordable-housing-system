@@ -1,4 +1,4 @@
-import '../globals.css' // <--- MUST have two dots
+import '../globals.css'  // <--- ADD THIS LINE BACK AT THE TOP
 import { Kantumruy_Pro } from 'next/font/google'
 import Link from 'next/link'
 
@@ -6,10 +6,6 @@ const khmerFont = Kantumruy_Pro({
   subsets: ['khmer'],
   weight: ['400', '700'] 
 })
-
-export const metadata = {
-  title: "MLMUPC Housing Portal",
-};
 
 export default function RootLayout({
   children,
