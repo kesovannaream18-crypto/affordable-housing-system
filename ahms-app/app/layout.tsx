@@ -18,11 +18,11 @@ export default function RootLayout({
         <main className="min-h-screen">
           {children}
         </main>
-        <footer className="bg-slate-900 p-8 border-t border-slate-800 text-center">
+        <footer className="bg-slate-900 p-8 border-t border-slate-800 text-center text-white">
           <div className="flex flex-wrap justify-center gap-4 mb-4">
-            <Link href="/" className="px-4 py-2 bg-slate-800 text-white rounded-md text-sm">🏠 Home</Link>
-            <Link href="/status" className="px-4 py-2 bg-slate-800 text-white rounded-md text-sm">🔍 Status</Link>
-            <Link href="/admin" className="px-4 py-2 bg-slate-800 text-white rounded-md text-sm">📊 Admin</Link>
+            <Link href="/" className="px-4 py-2 bg-slate-800 rounded hover:bg-blue-600 transition-colors">🏠 Home</Link>
+            <Link href="/status" className="px-4 py-2 bg-slate-800 rounded hover:bg-blue-600 transition-colors">🔍 Status</Link>
+            <Link href="/admin" className="px-4 py-2 bg-slate-800 rounded hover:bg-blue-600 transition-colors">📊 Admin</Link>
           </div>
           <p className="text-slate-500 text-xs">MLMUPC © 2026</p>
         </footer>
