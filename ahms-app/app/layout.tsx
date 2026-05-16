@@ -4,8 +4,7 @@ import Link from 'next/link'
 
 const khmerFont = Kantumruy_Pro({ 
   subsets: ['khmer'],
-  weight: ['400', '700'],
-  display: 'swap'
+  weight: ['400', '700'] 
 })
 
 export default function RootLayout({
@@ -16,18 +15,15 @@ export default function RootLayout({
   return (
     <html lang="km">
       <body className={khmerFont.className}>
-        <div className="flex flex-col min-h-screen">
-          <main className="flex-grow">
-            {children}
-          </main>
-          
-          <footer className="bg-slate-900 text-white p-10 text-center border-t border-slate-800">
-            <div className="flex flex-wrap justify-center gap-6 mb-6">
-              <Link href="/" className="hover:text-blue-400 font-medium">🏠 Home</Link>
-              <Link href="/status" className="hover:text-blue-400 font-medium">🔍 Status</Link>
-              <Link href="/admin" className="hover:text-blue-400 font-medium">📊 Admin</Link>
+        <div className="flex flex-col min-h-screen bg-white">
+          <main className="flex-grow">{children}</main>
+          <footer className="p-10 bg-slate-900 text-white text-center">
+            <div className="flex justify-center gap-6 mb-4">
+              <Link href="/">Home</Link>
+              <Link href="/status">Status</Link>
+              <Link href="/admin">Admin</Link>
             </div>
-            <p className="text-slate-500 text-xs uppercase tracking-widest">MLMUPC Portal © 2026</p>
+            <p className="text-xs text-slate-500">MLMUPC © 2026</p>
           </footer>
         </div>
       </body>
