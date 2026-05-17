@@ -44,9 +44,16 @@ export default function BuyerHistory() {
         </Link>
       </div>
 
-      <div className="mb-8">
-        <h1 className="text-3xl font-bold text-slate-800">📖 Buyer History Log</h1>
-        <p className="text-slate-500 mt-2">Search audit trails and application timelines for registered buyers.</p>
+      {/* Sleek Action Bar above the table */}
+      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-end mb-4 px-1">
+        <div>
+          <h2 className="text-xl font-bold text-slate-800">Recent Applications</h2>
+          <p className="text-sm text-slate-500 mt-1">Manage current affordable housing requests.</p>
+        </div>
+        
+        <Link href="/admin/history" className="mt-4 sm:mt-0 flex items-center gap-2 px-5 py-2.5 bg-blue-50 text-blue-700 hover:bg-blue-100 border border-blue-200 rounded-lg font-bold transition-colors shadow-sm">
+          <span>📖</span> View Audit History
+        </Link>
       </div>
 
       {/* Search Bar */}
