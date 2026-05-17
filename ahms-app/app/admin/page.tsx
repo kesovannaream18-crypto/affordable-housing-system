@@ -101,7 +101,11 @@ export default function AdminDashboard() {
         </div>
       </div>
       {/* ADD THIS BUTTON RIGHT ABOVE YOUR TABLE */}
-      <div className="flex justify-end mb-4">
+      <div className="flex justify-start mb-4">
+  <Link href="/admin/history" className="px-4 py-2 bg-slate-800 text-white rounded-lg hover:bg-slate-700 transition-colors shadow-sm font-medium">
+    📅 View Buyer History Logs
+  </Link>
+</div>
         <Link href="/admin/history" className="px-4 py-2 bg-slate-800 text-white rounded-lg hover:bg-slate-700 transition-colors shadow-sm font-medium">
           📅 View Buyer History Logs
         </Link>
