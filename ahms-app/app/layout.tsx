@@ -21,12 +21,14 @@ export default function RootLayout({
           </main>
           
           <footer className="bg-slate-900 text-white p-8 text-center border-t border-slate-800">
-            <div className="flex justify-center gap-6 mb-4">
+            <div className="flex flex-wrap justify-center gap-6 mb-4">
               <Link href="/" className="hover:text-blue-400">🏠 Home</Link>
               <Link href="/status" className="hover:text-blue-400">🔍 Status</Link>
               <Link href="/admin" className="hover:text-blue-400">📊 Admin</Link>
+              <Link href="/developers" className="hover:text-emerald-400">🏢 Developers</Link>
+              <Link href="/map" className="hover:text-purple-400">🗺️ Map View</Link>
             </div>
-            <p className="text-slate-500 text-xs uppercase">MLMUPC Portal © 2026</p>
+            <p className="text-slate-500 text-xs uppercase tracking-widest">MLMUPC Portal © 2026</p>
           </footer>
         </div>
       </body>
