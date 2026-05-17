@@ -1,4 +1,4 @@
-import '../globals.css'
+import './globals.css'
 import { Kantumruy_Pro } from 'next/font/google'
 import Link from 'next/link'
 
