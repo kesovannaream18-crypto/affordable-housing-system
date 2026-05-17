@@ -1,6 +1,7 @@
 'use client';
 import { useEffect, useState } from 'react';
 import { createBrowserClient } from '@supabase/ssr';
+import Link from 'next/link'
 
 export default function AdminDashboard() {
   const [applications, setApplications] = useState<any[]>([]);
@@ -99,7 +100,12 @@ export default function AdminDashboard() {
           <p className="text-5xl font-black text-amber-500 mt-2 tracking-tighter">{pendingApps}</p>
         </div>
       </div>
-
+      {/* ADD THIS BUTTON RIGHT ABOVE YOUR TABLE */}
+      <div className="flex justify-end mb-4">
+        <Link href="/admin/history" className="px-4 py-2 bg-slate-800 text-white rounded-lg hover:bg-slate-700 transition-colors shadow-sm font-medium">
+          📅 View Buyer History Logs
+        </Link>
+      </div>
       {/* Main Data Table */}
       <div className="max-w-6xl mx-auto bg-white rounded-[2.5rem] shadow-2xl shadow-slate-200/60 overflow-hidden border border-white">
         <div className="bg-blue-900 text-white p-6 grid grid-cols-6 font-black uppercase text-[10px] tracking-[0.15em] italic">
