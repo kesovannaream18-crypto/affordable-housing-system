@@ -56,9 +56,9 @@ export default function AdminDashboard() {
   };
 
   // Analytics Logic
-  const totalRevenue = applications.reduce((sum, app) => (app.payments?.length > 0 ? sum + 150 : sum), 0);
-  const approvedApps = applications.filter(a => a.application_status?.toUpperCase() === 'APPROVED').length;
-  const pendingApps = applications.filter(a => a.application_status?.toUpperCase() === 'PENDING').length;
+  const totalRevenue = applications.reduce((sum: number, app: any) => (app.payments?.length > 0 ? sum + 150 : sum), 0);
+  const approvedApps = applications.filter((a: any) => a.application_status?.toUpperCase() === 'APPROVED').length;
+  const pendingApps = applications.filter((a: any) => a.application_status?.toUpperCase() === 'PENDING').length;
 
   if (loading) {
     return (
@@ -100,18 +100,21 @@ export default function AdminDashboard() {
           <p className="text-5xl font-black text-amber-500 mt-2 tracking-tighter">{pendingApps}</p>
         </div>
       </div>
-      {/* ADD THIS BUTTON RIGHT ABOVE YOUR TABLE */}
-      <div className="flex justify-start mb-4">
-  <Link href="/admin/history" className="px-4 py-2 bg-slate-800 text-white rounded-lg hover:bg-slate-700 transition-colors shadow-sm font-medium">
-    📅 View Buyer History Logs
-  </Link>
-</div>
-        <Link href="/admin/history" className="px-4 py-2 bg-slate-800 text-white rounded-lg hover:bg-slate-700 transition-colors shadow-sm font-medium">
-          📅 View Buyer History Logs
+
+      {/* Sleek Action Bar above the table */}
+      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-end max-w-6xl mx-auto mb-4 px-1">
+        <div>
+          <h2 className="text-xl font-bold text-slate-800">Recent Applications</h2>
+          <p className="text-sm text-slate-500 mt-1">Manage current affordable housing requests.</p>
+        </div>
+        
+        <Link href="/admin/history" className="mt-4 sm:mt-0 flex items-center gap-2 px-5 py-2.5 bg-blue-50 text-blue-700 hover:bg-blue-100 border border-blue-200 rounded-lg font-bold transition-colors shadow-sm">
+          <span>📖</span> View Buyer History Logs
         </Link>
       </div>
+
       {/* Main Data Table */}
-      <div className="max-w-6xl mx-auto bg-white rounded-[2.5rem] shadow-2xl shadow-slate-200/60 overflow-hidden border border-white">
+      <div className="max-w-6xl mx-auto bg-white rounded-[2.5rem] shadow-2xl shadow-slate-200/60 overflow-hidden border border-white mb-10">
         <div className="bg-blue-900 text-white p-6 grid grid-cols-6 font-black uppercase text-[10px] tracking-[0.15em] italic">
           <div>Applicant</div>
           <div className="text-center">Score</div>
